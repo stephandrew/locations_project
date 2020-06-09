@@ -1,13 +1,14 @@
 import csv
 
-atx_todo = 'austin_places.csv'
+print('what city are you located in?')
+city = input() + '.csv'
 
 print('read or write')
 user_in = input()
 
 if user_in == 'write':
 
-    with open(atx_todo, 'a', newline='') as csv_writer:
+    with open(city, 'a', newline='') as csv_writer:
             # list header names
             fieldnames = ['location_name', 'category', 'description', 'rating', 'visited']
 
@@ -53,7 +54,7 @@ if user_in == 'write':
                     print('writer closed')
 
 elif user_in == 'read':
-    with open(atx_todo, 'r', newline='') as csv_reader:
+    with open(city, 'r', newline='') as csv_reader:
          print('what are you looking for today?')
          input_category = input()
          print('\n')
